@@ -4,5 +4,6 @@ Include/
 Lib/
 tcl/
 Scripts/
-env/pip-selfcheck.json
 .idea/
+/env/
+my_blog/__pycache__/my_blog.cpython-36.pyc

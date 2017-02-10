@@ -1,5 +1,4 @@
 from flask import Flask
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -20,4 +19,4 @@ def post1():
 
 @app.route('/post/<postnum>')
 def post(postnum):
-    return 'This is post' + postnum
+    return 'This is post ' + postnum
