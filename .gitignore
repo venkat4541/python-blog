@@ -4,3 +4,5 @@ Include/
 Lib/
 tcl/
 Scripts/
+env/pip-selfcheck.json
+.idea/
