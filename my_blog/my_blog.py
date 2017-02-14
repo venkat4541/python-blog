@@ -1,22 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return app.send_static_file('home.html')
+    return render_template('home.html')
 
-@app.route('/about')
-def about():
-    return app.send_static_file('about.html')
+@app.route('/birthday')
+def birthday():
+    return 'May 17 1990'
 
-@app.route('/contact')
-def contact():
-    return app.send_static_file('contact.html')
-
-@app.route('/post/1')
-def post1():
-    return 'This is post 1'
-
-@app.route('/post/<postnum>')
-def post(postnum):
-    return 'This is post ' + postnum
+@app.route('/greeting/<name>')
+def greeting(name):
+    return 'Hello ' + name + '!'
