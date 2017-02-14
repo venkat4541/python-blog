@@ -6,4 +6,8 @@ tcl/
 Scripts/
 .idea/
 /env/
-my_blog/__pycache__/my_blog.cpython-36.pyc
+my_blog/__pycache__/
+
+/new_blog/venv/
+/new_blog/__pycache__
+
