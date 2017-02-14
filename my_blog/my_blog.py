@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,3 +12,20 @@ def birthday():
 @app.route('/greeting/<name>')
 def greeting(name):
     return 'Hello ' + name + '!'
+
+@app.route('/add/<num1>/<num2>')
+def add(num1, num2):
+    return str(int(num1)+int(num2))
+
+@app.route('/multiply/<num1>/<num2>')
+def multiply(num1, num2):
+    return str(int(num1)*int(num2))
+
+@app.route('/subtract/<num1>/<num2>')
+def subtract(num1, num2):
+    return str(int(num1) - int(num2))
+
+@app.route('/favouritefoods')
+def ff():
+    list = ['Noodles', 'Pizza', 'Pasta']
+    return jsonify(list)
